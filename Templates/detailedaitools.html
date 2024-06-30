@@ -1,0 +1,31 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container ps-0 pt-5">
+	<h1>{{i.category_name}}</h1>
+	{% for i in obj %}
+ <div class="row ps-0 p-3" data-aos="zoom-out" id="grad2" style="border: 3px solid; border-color: #ccc ;border-radius: 10px; box-shadow:7px 7px 8px purple;">		
+  	<div class="col-md-2 ps-0">
+     
+			<img class="ps-3" width="100%" height="200" src="{{i.tool_image.url}}">
+			<br>
+	</div>			
+	 <div class="col-md-8" style="border-left: 3px solid; border-color: #202020 ;">	
+			
+				<h3 style="font-size: 26px; color: purple;" class="text-center"><b>{{i.tool_name}} Tool</b></h3>
+				<br>
+				<p style="font-size: 18px;" class="text-center">{{i.tool_description|linebreaks}}</p>
+				<br>
+				
+	</div>
+	<div class="col-md-2 p-4" style="border-left: 3px solid; border-color: #202020 ;">
+		<div class="ps-5 pt-5"><a href="{{i.tool_link}}" target="_blank" class="btn btn-lg text-white text-center ps-3" id="grad1"><b>Explore</b></a></div>
+				<br>
+	</div>
+  </div>
+  <br> 
+  	{% endfor %} 	
+</div>
+
+{% endblock %}

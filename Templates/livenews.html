@@ -1,0 +1,87 @@
+{%extends 'base.html'%}
+{%block content%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+        	
+
+        .smallHeading {
+            font-weight: 700;
+            font-size: 50px;
+            color: #5d16a8;
+            text-align: center;
+        }
+
+        .searchGroup {
+            text-align: right;
+            margin-top: 50px;
+        }
+
+        .searchButton {
+            background-color: #5FBDFF;
+            border-radius: 0px;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+            /* border: 4px solid black; */
+        }
+
+        .searchBar {
+            width: 40%;
+            padding: 10px;
+            padding-top: 6px;
+            border: 4px solid #7d27ff;
+        }
+        .viewmore {
+            padding-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .viewmore:hover {
+            font-size: 15px;
+            box-shadow: 2px 2px 5px gray;
+        }
+        .grow {
+            transition: all .2s ease-in-out;
+        }
+
+        .grow:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="row p-3">
+            <div class="col-12" id="grad1" style="box-shadow:3px 3px 4px purple;">
+                <h2 class="col-md-12 text-center text-light p-5" style="font-size: 40px">LIVE NEWS</h2>
+            </div>
+        </div>
+                <hr style=" border: 1px solid black;" class="mt-4">
+    <div class="container mb-5">
+        </form>
+        <div class="row mb">
+            {%for i in k %}
+            <div class=" col-md-4 mt-5 p-3" >
+                <div class="card h-100 grow" data-aos="fade-left" style="border: 1px solid;border-radius: 20px; box-shadow:7px 7px 10px purple;">
+
+                    <img style="border-radius: 20px;" src="{{i.urlToImage}}" class="card-img-top" alt="..." height="250px">
+                    <div class="card-body">
+                        <h5 style=" font-size: 24px; font-weight: 700;" class="card-title">{{i.title|truncatechars:30}}</h5>
+                            <p>{{i.content|truncatechars:150}}</p>
+
+                        <a href="{{i.url}}" target="_blank" class="btn text-white eff2" style="background-color: purple;">Read more</a>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+
+</html>
+{%endblock%}

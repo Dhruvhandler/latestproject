@@ -1,0 +1,81 @@
+Entity,Code,Year,newly_funded_ai_companies
+Australia,AUS,2021,12
+Australia,AUS,2022,18
+Australia,AUS,2023,25
+Canada,CAN,2021,22
+Canada,CAN,2022,25
+Canada,CAN,2023,28
+China,CHN,2013,25
+China,CHN,2014,30
+China,CHN,2015,67
+China,CHN,2016,71
+China,CHN,2017,94
+China,CHN,2018,200
+China,CHN,2019,213
+China,CHN,2020,121
+China,CHN,2021,119
+China,CHN,2022,145
+China,CHN,2023,170
+European Union,,2013,35
+European Union,,2014,35
+European Union,,2015,63
+European Union,,2016,68
+European Union,,2017,121
+European Union,,2018,160
+European Union,,2019,129
+European Union,,2020,92
+European Union,,2021,106
+European Union,,2022,108
+European Union,,2023,113
+France,FRA,2021,27
+France,FRA,2022,32
+France,FRA,2023,34
+Germany,DEU,2021,25
+Germany,DEU,2022,29
+Germany,DEU,2023,30
+India,IND,2021,23
+India,IND,2022,25
+India,IND,2023,28
+Israel,ISR,2021,28
+Israel,ISR,2022,30
+Israel,ISR,2023,44
+Japan,JPN,2021,12
+Japan,JPN,2022,17
+Japan,JPN,2023,34
+Netherlands,NLD,2021,16
+Netherlands,NLD,2022,17
+Netherlands,NLD,2023,19
+Singapore,SGP,2021,10
+Singapore,SGP,2022,15
+Singapore,SGP,2023,16
+South Korea,KOR,2021,19
+South Korea,KOR,2022,20
+South Korea,KOR,2023,25
+Switzerland,CHE,2021,12
+Switzerland,CHE,2022,15
+Switzerland,CHE,2023,18
+United Kingdom,GBR,2021,49
+United Kingdom,GBR,2022,51
+United Kingdom,GBR,2023,53
+United States,USA,2013,280
+United States,USA,2014,292
+United States,USA,2015,249
+United States,USA,2016,375
+United States,USA,2017,477
+United States,USA,2018,505
+United States,USA,2019,409
+United States,USA,2020,348
+United States,USA,2021,299
+United States,USA,2022,306
+United States,USA,2023,311
+World,OWID_WRL,2013,419
+World,OWID_WRL,2014,440
+World,OWID_WRL,2015,533
+World,OWID_WRL,2016,703
+World,OWID_WRL,2017,981
+World,OWID_WRL,2018,1193
+World,OWID_WRL,2019,1051
+World,OWID_WRL,2020,762
+World,OWID_WRL,2021,746
+World,OWID_WRL,2022,743
+World,OWID_WRL,2023,1054

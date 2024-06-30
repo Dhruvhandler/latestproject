@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<div class="container">
+ <div class="row pt-5">
+     <div class="col-4" style="">
+       <img class="shadow-lg" style="border-radius: 20px;" src="{% static 'image/loginimage.jpg' %}" width="500" height="100%">
+     </div>
+      <div class="col-8"  >
+         <div class="p-5 shadow-lg" style=" border-top-right-radius: 20px; border-bottom-right-radius: 20px;" id="grad1">
+        <center><h1><a style="color: #ccc">User Register</h1><br></center>
+
+    <form method="POST" action="{% url 'register1' %}">
+      {% csrf_token %}
+     <div class="form"> 
+
+      <label for="exampleFormControlInput1" class="form-label ps-1">Full Name</label>
+
+       <input name="nm" type="text" value="{{name}}" readonly class="form-control">
+      <br>
+      <label for="exampleFormControlInput1" class="form-label ps-1">Email</label>
+
+       <input name="em" type="email" value="{{email}}" readonly class="form-control"> <br/>
+      <label for="exampleFormControlInput1" class="form-label ps-1">Password</label>
+        <input name="pw" type="password" value="{{password}}" readonly class="form-control"> <br/>
+      <label for="exampleFormControlInput1" class="form-label ps-1">OTP Verification</label>
+       <input name="otp" type="text" required class="form-control"> 
+       
+
+
+
+       <input name="otp1" type="hidden" value="{{otp}}" required>
+
+      </div> 
+    <br>
+    <br>
+    <button style="color: purple;" id="grad2" class="btn" type="submit" value="Login">Register</button>
+        
+     </div> 
+</form>
+    </div> 
+
+   </div> 
+
+  </section> <!-- partial --> 
+
+
+
+{% if msg %}
+<script type="text/javascript">
+  alert("{{msg}}")
+</script>
+{% endif %}
+ </body>
+
+
+</html>
+{% endblock %}

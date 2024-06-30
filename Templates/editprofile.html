@@ -1,0 +1,61 @@
+{% extends 'sidebar.html' %}
+{% block content%}
+{% load static %}
+
+<div class="container ps-0 pt-5" >
+ <div class="row p-5 pb-5 " style=" border-radius: 20px; border: 1px solid;box-shadow:7px 7px 9px purple;"  id="grad2" >
+    <div class="col-4 ps-0 pt-0">
+        <img src="{{user.image.url}}" width="250" height="200">
+    </div>
+      <div class="col-8 ps-5 pt-5" >
+         <div class="p-5 ">
+       <centre><h1><a style="color: purple;"><b>EDIT PROFILE DETAILS</b></a></h1></centre>
+</div>
+</div>
+<div class="row container pt-0">
+<div class="col-md-6 pt-5">
+    <form method="POST" action="">
+        {% csrf_token%}
+    <h3><b>Name</b></h3>
+    <br>
+    <h3><b>D.O.B</b></h3>
+    <br>
+    <h3><b>E-mail</b></h3>
+    <br>
+    <h3><b>Phone No.</b></h3>
+    <br>
+</div>
+<div class="col-md-6 pt-5">
+    <input class="form-control" name="nm" value="{{user.name}}">
+    <br>
+    <input class="form-control" name="dob" value="{{user.dob}}">
+    <br>
+   <input class="form-control" name="em" value="{{user.email}}">
+    <br>
+    <input class="form-control" name="ph" value="{{user.phone}}">
+    <br>
+</div>
+</div>
+<div style="border: 1px solid; border-color: #ccc"></div>
+<div class="row container pt-5">
+    <div class="col-md-6">
+        <h3><b>Github</b></h3>
+        <br>
+        <h3><b>LinkedIn</b></h3>
+        <br>
+        <h3><b>Facebook</b></h3>
+        <br> 
+    </div>
+    <div class="col-md-6">
+        <input class="form-control" name="git" value="{{user.Github}}">
+        <br>
+         <input class="form-control" name="link" value="{{user.linkedIn}}">
+        <br>
+         <input class="form-control" name="face" value="{{user.Facebook}}">
+        <br> 
+    </div>
+</div>
+<button type="submit" class="btn btn-lg border" >Save</button>
+</form>
+</div>
+{% endblock %}

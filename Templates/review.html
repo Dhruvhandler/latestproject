@@ -1,0 +1,34 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container ps-5 pt-4">
+ <div class="row ps-5 pt-5">
+  <div class="col-1">
+          
+   </div>
+      <div class="col-8 ps-5 pt-5" data-aos="zoom-in">
+         <div class="p-5 " style=" border-radius: 20px; border: 1px solid;box-shadow:7px 7px 9px purple;"  id="grad2">
+        <center><h1><a style="color: purple;"><b>Reviews</b></h1><br></center>
+        <form method="POST" action="">
+        {% csrf_token %}  
+        <p> {{msg}}</p>
+      <label style="color: purple; font-size: 20px;" for="exampleFormControlInput1" class="form-label ps-1"><b>Name</label>
+    <input data-aos="fade-up" style="border: 1px solid; border-color: #ccc;" type="text" class="form-control bg-white" placeholder="Name" name="nm" required><br>
+    <label style="color: purple; font-size: 20px;" for="exampleFormControlInput1" class="form-label ps-1">Leave us message</label>
+    <textarea data-aos="fade-up" style="width: 100%; height: 200px; border: 1px solid; border-color: #ccc;" type="text" class="form-control" placeholder="Message" name="msg" required></textarea><br>
+    <div>
+      <br>
+      <center><button type="submit" data-aos="fade-right" class="btn btn-lg rounded eff1" style="background: lightgrey; border: 1px solid; border-color: #ccc;"> <a style="color:purple;"><b>Submit</b></button><br></center>
+        
+     </form>
+     </div>
+     </div>
+     </div>
+         <div class="col-2">
+          
+   </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+<html lang="en">
+    <head>
+    <style>
+        #grad1{
+    background-image: linear-gradient(to top,purple,darkblue);
+}
+    </style>
+    </head>
+ <body>
+  <div>
+    
+  </div>
+   <div class="row p-3">
+            <div class="col-12" id="grad1" style="box-shadow:3px 3px 4px purple;">
+                <h2 class="col-md-12 text-center text-light p-5" style="font-size: 40px; letter-spacing: 1px">Contact Us</h2>
+            </div>
+        </div>
+        <br>
+      <div class="container text-center">
+        <div class="card with-pattern-full" style="box-shadow:5px 5px 7px purple; border: 1px solid;" >
+          <div class="card-body py-5 p-md-5 index-forward" >
+            <div class="row gy-4">
+              <div class="col-md-4" data-aos="fade-right" style=" border-right: 1px solid;">
+                <div>
+                    <img src="{% static 'image/telephoneicon.jpg' %}" height="50" width="50">
+                </div>
+                <br>
+                <h3 class="h4">Phone</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="text-muted"><a class="reset-anchor" href="tel:+001234567890">+ 00 123 456 7890</a></li>
+                  <li class="text-muted"><a class="reset-anchor" href="tel:+001234567890">+ 00 123 456 7890</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4" data-aos="fade-down" style=" border-right: 1px solid;">
+                  <div>
+                    <img src="{% static 'image/mailicon.png ' %}" height="50" width="50">
+                </div>
+                <br>
+                <h3 class="h4">Support</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="text-muted"><a class="reset-anchor" href="mailto:iso@company.com">allaboutai925@gmail.com</a></li>
+                  <li class="text-muted"><a class="reset-anchor" href="mailto:iso@support.com">enquiry925@gmail.com</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4" data-aos="fade-left">
+                 <div>
+                    <img src="{% static 'image/location.png ' %}" height="50" width="50">
+                </div>
+                <br>
+                <h3 class="h4">Location</h3>
+                <ul class="list-unstyled mb-0 px-5">
+                  <li class="text-muted"><a class="reset-anchor" href="#!">1234 New Ave, New York, NY00235, USA</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- CONTACT FORM SECTION-->
+      <div class="container py-5">
+        <div class="row" >
+          <div class="col-lg-7 mx-auto text-center mb-5" data-aos="zoom-in">
+            <h2>Looking for a excellent Business idea?</h2>
+            <p class="text-muted">Seamlessly deliver A.I information and crucial analysis with prediction.</p><button style="color: white; background: purple; border-radius: 7px;  height: 45px;" class="btn eff2" href="{% url 'maps' %}"><a href="{% url 'maps' %}" class="text-white me-2">Get directions</a></button>
+          </div>
+        </div>
+        <div class="row mt-5 p-5 " style="box-shadow:7px 7px 10px purple; border: 2px solid;">
+          <div class="col-lg- 12 mx-auto">
+            <h1 class=" display-5 text-center"><b>Contact Now</b></h1>
+            <br>
+            <form method="POST" action="">
+              {% csrf_token %}
+              <div class="row gy-3" data-aos="zoom-out-right">
+                <div class="col-lg-4 col-md-6">
+                  <input style="border: 1px solid; border-color: purple;" class="form-control form-control-lg" type="text" placeholder="Full name" name="nm"> 
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input style="border: 1px solid; border-color: purple;" class="form-control form-control-lg" type="email" placeholder="Email address" name="em">
+                </div>
+                <div class="col-lg-4">
+                  <input style="border: 1px solid; border-color: purple;" class="form-control form-control-lg" type="text" placeholder="Subject" name="sub">
+                </div>
+                <div class="col-12">
+                  <textarea style="border: 1px solid; border-color: purple;" class="form-control" rows="5" placeholder="How can we help you" name="msg"></textarea>
+                </div>
+                <div class="col-12 text-md-center mb-0">
+                  <button style="color: white;  background: purple; border-radius: 7px; height: 45px;" class="btn eff2" type="submit"> <i class="fas fa-paper-plane me-2"></i>Send message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+         <!-- JavaScript files-->
+         {% if msg %}
+         <script type="text/javascript">
+           alert("{{msg}}")
+         </script>
+         {% endif %}
+   
+</body>
+</html>
+{% endblock %}

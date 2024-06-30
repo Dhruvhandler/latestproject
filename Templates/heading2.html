@@ -1,0 +1,116 @@
+{% extends 'sidebar.html' %}
+{% block content%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width-device-width", intial-scale=1>
+	<title></title>
+	<style>
+		select{
+	width: 400px;
+	height: 50px;
+	color: darkgreen;
+	font-size: 20px;
+	text-align: centre;
+}
+button{
+	width: 250px;
+	height: 50px;
+	border-radius: 1px;
+	background-color: skyblue;
+}
+row{
+	width: 400px;
+	height: 400px;
+}
+.card{
+	padding-left: 100px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	border: 1px solid;
+	box-shadow:9px 9px 12px purple;
+	border-radius: 20px;
+}
+.a1{
+	padding-left: 10px;
+}
+body{
+	background-image: ;
+}
+a{
+	font-size: 20px;
+	color: #222423;
+	text-decoration:none;
+	letter-spacing: 1px;
+}
+h2
+{
+	color: purple;
+	font-family: Century 	;
+
+}
+#grad{
+
+	background-image: linear-gradient(to left,whitesmoke,#e1e8e3,whitesmoke);
+}
+#grad2{
+
+	background-image: linear-gradient(to left,skyblue,whitesmoke);
+}
+.he:hover{color:#ccc !important}
+	</style>	
+
+
+</head>
+<body>
+	<div class="row">
+		<div class="col-12" style="padding-left: 300px; padding-top: 25px; padding-bottom: 25px;">
+			<img src="{% static 'image/robotheadinganalysis.jpg' %}" height="100" width="770">
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-3" data-aos="zoom-in" style="padding-top: 300px; padding-left: 0px;">
+			<img src="{% static 'image/titleanalysisrobot.jpg' %}" height="500" width="400">
+		</div>
+		<div class="col-9" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000" style="padding-top: 0px; padding-left: 50px;">
+	<div id="grad" class="card" style="width: 60rem;">
+	<div class="card-body">
+	<h2><b>No of newly funded AI Companies over the years in different countries</b></h2>
+	<div class="a1">
+	<br>
+	<h4 style="text-align: left;">------Select any option below------</h4>
+	<br>
+	<br>
+	<div class="border rounded p-2 he" id="grad1" style="background-color: darkviolet; width: 70%; text-align: center;">
+	<a class="text-white" href="{% url 'md11' %}">Select one Country with all years</a>
+	</div>
+	<br>
+	<div class="border rounded p-2 he" id="grad1" style="background-color: darkviolet; width: 70%; text-align: center;">
+	<a class="text-white" href="{% url 'md12' %}">All countries across all years</a>
+	</div>
+	<br>
+	<div class="border rounded p-2 he" id="grad1" style="background-color: darkviolet; width: 70%; text-align: center;">
+	<a class="text-white" href="{% url 'md13' %}">Select two countries across all years</a>
+	</div>
+	<br>
+	<div class="border rounded p-2 he" id="grad1" style="background-color: darkviolet; width: 70%; text-align: center;">
+	<a class="text-white" href="{% url 'md14' %}">Select two countries with start year and end year</a>
+	</div>
+	<br>
+	<div class="border rounded p-2 he" id="grad1" style="background-color: darkviolet; width: 70%; text-align: center;">
+	<a class="text-white" href="{% url 'md15' %}">Select three countries with all years</a>
+	</div>
+	<br>
+	<div class="border rounded p-2 he" id="grad1" style="background-color: darkviolet; width: 70%; text-align: center;">
+	<a class="text-white" href="{% url 'md16' %}">World Map</a>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+{% endblock %}

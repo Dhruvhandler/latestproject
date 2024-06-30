@@ -1,0 +1,201 @@
+Entity,Code,Year,number_ai_bills_cumulative
+Australia,AUS,2016,0
+Australia,AUS,2017,0
+Australia,AUS,2018,0
+Australia,AUS,2019,0
+Australia,AUS,2020,0
+Australia,AUS,2021,0
+Australia,AUS,2022,0
+Australia,AUS,2023,0
+Belgium,BEL,2016,0
+Belgium,BEL,2017,0
+Belgium,BEL,2018,0
+Belgium,BEL,2019,2
+Belgium,BEL,2020,3
+Belgium,BEL,2021,5
+Belgium,BEL,2022,6
+Belgium,BEL,2023,7
+Brazil,BRA,2016,0
+Brazil,BRA,2017,0
+Brazil,BRA,2018,1
+Brazil,BRA,2019,1
+Brazil,BRA,2020,1
+Brazil,BRA,2021,1
+Brazil,BRA,2022,1
+Brazil,BRA,2023,1
+Canada,CAN,2016,0
+Canada,CAN,2017,1
+Canada,CAN,2018,1
+Canada,CAN,2019,1
+Canada,CAN,2020,1
+Canada,CAN,2021,1
+Canada,CAN,2022,1
+Canada,CAN,2023,1
+China,CHN,2016,0
+China,CHN,2017,1
+China,CHN,2018,1
+China,CHN,2019,2
+China,CHN,2020,2
+China,CHN,2021,2
+China,CHN,2022,2
+China,CHN,2023,3
+Denmark,DNK,2016,0
+Denmark,DNK,2017,0
+Denmark,DNK,2018,0
+Denmark,DNK,2019,0
+Denmark,DNK,2020,0
+Denmark,DNK,2021,0
+Denmark,DNK,2022,0
+Denmark,DNK,2023,0
+Finland,FIN,2016,0
+Finland,FIN,2017,0
+Finland,FIN,2018,0
+Finland,FIN,2019,0
+Finland,FIN,2020,0
+Finland,FIN,2021,0
+Finland,FIN,2022,0
+Finland,FIN,2023,0
+France,FRA,2016,0
+France,FRA,2017,0
+France,FRA,2018,1
+France,FRA,2019,1
+France,FRA,2020,3
+France,FRA,2021,4
+France,FRA,2022,5
+France,FRA,2023,6
+Germany,DEU,2016,0
+Germany,DEU,2017,0
+Germany,DEU,2018,0
+Germany,DEU,2019,0
+Germany,DEU,2020,0
+Germany,DEU,2021,1
+Germany,DEU,2022,1
+Germany,DEU,2023,1
+India,IND,2016,0
+India,IND,2017,0
+India,IND,2018,0
+India,IND,2019,0
+India,IND,2020,1
+India,IND,2021,1
+India,IND,2022,1
+India,IND,2023,1
+Ireland,IRL,2016,0
+Ireland,IRL,2017,0
+Ireland,IRL,2018,0
+Ireland,IRL,2019,0
+Ireland,IRL,2020,0
+Ireland,IRL,2021,0
+Ireland,IRL,2022,0
+Ireland,IRL,2023,0
+Italy,ITA,2016,0
+Italy,ITA,2017,0
+Italy,ITA,2018,1
+Italy,ITA,2019,2
+Italy,ITA,2020,3
+Italy,ITA,2021,4
+Italy,ITA,2022,5
+Italy,ITA,2023,6
+Japan,JPN,2016,1
+Japan,JPN,2017,1
+Japan,JPN,2018,1
+Japan,JPN,2019,1
+Japan,JPN,2020,2
+Japan,JPN,2021,3
+Japan,JPN,2021,3
+Japan,JPN,2021,3
+Netherlands,NLD,2016,0
+Netherlands,NLD,2017,0
+Netherlands,NLD,2018,0
+Netherlands,NLD,2019,0
+Netherlands,NLD,2020,0
+Netherlands,NLD,2021,0
+Netherlands,NLD,2022,0
+Netherlands,NLD,2023,0
+New Zealand,NZL,2016,0
+New Zealand,NZL,2017,0
+New Zealand,NZL,2018,0
+New Zealand,NZL,2019,0
+New Zealand,NZL,2020,0
+New Zealand,NZL,2021,0
+New Zealand,NZL,2022,0
+New Zealand,NZL,2023,0
+Norway,NOR,2016,0
+Norway,NOR,2017,0
+Norway,NOR,2018,0
+Norway,NOR,2019,0
+Norway,NOR,2020,0
+Norway,NOR,2021,0
+Norway,NOR,2022,0
+Norway,NOR,2023,0
+Russia,RUS,2016,0
+Russia,RUS,2017,0
+Russia,RUS,2018,0
+Russia,RUS,2019,1
+Russia,RUS,2020,4
+Russia,RUS,2021,6
+Russia,RUS,2022,5
+Russia,RUS,2023,6
+Singapore,SGP,2016,0
+Singapore,SGP,2017,0
+Singapore,SGP,2018,0
+Singapore,SGP,2019,0
+Singapore,SGP,2020,0
+Singapore,SGP,2021,0
+Singapore,SGP,2022,0
+Singapore,SGP,2023,0
+South Africa,ZAF,2016,0
+South Africa,ZAF,2017,0
+South Africa,ZAF,2018,0
+South Africa,ZAF,2019,0
+South Africa,ZAF,2020,0
+South Africa,ZAF,2021,0
+South Africa,ZAF,2022,0
+South Africa,ZAF,2023,0
+South Korea,KOR,2016,0
+South Korea,KOR,2017,0
+South Korea,KOR,2018,2
+South Korea,KOR,2019,2
+South Korea,KOR,2020,3
+South Korea,KOR,2021,4
+South Korea,KOR,2022,3
+South Korea,KOR,2023,4
+Spain,ESP,2016,0
+Spain,ESP,2017,0
+Spain,ESP,2018,0
+Spain,ESP,2019,0
+Spain,ESP,2020,2
+Spain,ESP,2021,5
+Spain,ESP,2022,3
+Spain,ESP,2023,4
+Sweden,SWE,2016,0
+Sweden,SWE,2017,0
+Sweden,SWE,2018,0
+Sweden,SWE,2019,0
+Sweden,SWE,2020,0
+Sweden,SWE,2021,0
+Sweden,SWE,2022,0
+Sweden,SWE,2023,0
+Switzerland,CHE,2016,0
+Switzerland,CHE,2017,0
+Switzerland,CHE,2018,0
+Switzerland,CHE,2019,0
+Switzerland,CHE,2020,0
+Switzerland,CHE,2021,0
+Switzerland,CHE,2022,0
+Switzerland,CHE,2023,0
+United Kingdom,GBR,2016,0
+United Kingdom,GBR,2017,0
+United Kingdom,GBR,2018,0
+United Kingdom,GBR,2019,0
+United Kingdom,GBR,2020,2
+United Kingdom,GBR,2021,5
+United Kingdom,GBR,2022,4
+United Kingdom,GBR,2023,5
+United States,USA,2016,0
+United States,USA,2017,1
+United States,USA,2018,4
+United States,USA,2019,7
+United States,USA,2020,10
+United States,USA,2021,13
+United States,USA,2022,15
+United States,USA,2023,17

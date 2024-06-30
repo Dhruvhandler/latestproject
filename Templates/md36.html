@@ -1,0 +1,148 @@
+{% extends 'sidebar.html' %}
+{% block content%}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width-device-width", intial-scale=1>
+	 <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+	<title></title>
+	<style>
+select{
+	width: 400px;
+	height: 60px;
+	color: purple;
+	font-size: 20px;
+	text-align: centre;
+	border-radius: 10px;
+	border: 1px solid;
+	border-color: black;
+}
+.card{
+	padding-left: 100px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	border: 2px solid;
+	box-shadow:9px 9px 12px purple;
+	border-radius: 20px;
+}
+button{
+	width: 180px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: purple;
+}
+button:hover{
+	background-color: darkviolet;
+}
+#grad{
+  background-image: linear-gradient(to left,whitesmoke,#e1e8e3,whitesmoke);
+}
+h4{
+	font-size: 20px;
+}
+body{
+	background-color: #ffffff;
+	background-size: cover;                      
+  background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-3" style="padding-top: 150px; padding-left: 70px;">
+			<img src="{% static 'image/robotanalysispage.jpg' %}" height="600" width="400">
+		</div>
+		<div class="col-9" style="padding-top: 20px; padding-left: 200px;">
+	<div id="grad" class="card" style="width: 42rem;">
+ <div class="card-body">
+	<form method="POST" action="">
+		{% csrf_token %}
+			<h3 style="padding-left: 0px; color: purple;">Select 1st Country...</h3>
+			<select name="country">
+			{% for i in data %}
+			<option value="{{i}}">{{i}}</option>
+			{% endfor %}
+		</select>
+		<br>
+		<br>
+		<h3 style="padding-left: 0px; color: purple;">Select 2nd Country...</h3>
+			<select name="country1">
+			{% for i in data %}
+			<option value="{{i}}">{{i}}</option>
+			{% endfor %}
+		</select>
+		<br>
+		<br>
+		<h3 style="padding-left: 0px; color: purple;">Select 3rd Country...</h3>
+			<select name="country2">
+			{% for i in data %}
+			<option value="{{i}}">{{i}}</option>
+			{% endfor %}
+		</select>
+		<br>
+		<br>
+			<h3 style="padding-left: 0px; color: purple;">Select Start Year...</h3>
+			<select name="syear">
+			<option value="2000">2000</option>
+				<option value="2001">2001</option>
+					<option value="2002">2002</option>
+						<option value="2003">2003</option>
+							<option value="2004">2004</option>
+								<option value="2005">2005</option>
+									<option value="2006">2006</option>
+										<option value="2007">2007</option>
+											<option value="2008">2008</option>
+												<option value="2009">2009</option>
+													<option value="2010">2010</option>
+														<option value="2011">2011</option>
+																<option value="2012">2012</option>
+																	<option value="2013">2013</option>
+																		<option value="2014">2014</option>
+																			<option value="2015">2015</option>
+																				<option value="2016">2016</option>
+																					<option value="2017">2017</option>
+																						<option value="2018">2018</option>
+																							<option value="2019">2019</option>
+																								<option value="2020">2020</option>
+		</select>
+		<br>
+		<br>
+			<h3 style="padding-left: 0px; color: purple;">Select End Year...</h3>
+			<select name="eyear">
+			<option value="2000">2000</option>
+				<option value="2001">2001</option>
+					<option value="2002">2002</option>
+						<option value="2003">2003</option>
+							<option value="2004">2004</option>
+								<option value="2005">2005</option>
+									<option value="2006">2006</option>
+										<option value="2007">2007</option>
+											<option value="2008">2008</option>
+												<option value="2009">2009</option>
+													<option value="2010">2010</option>
+														<option value="2011">2011</option>
+																<option value="2012">2012</option>
+																	<option value="2013">2013</option>
+																		<option value="2014">2014</option>
+																			<option value="2015">2015</option>
+																				<option value="2016">2016</option>
+																					<option value="2017">2017</option>
+																						<option value="2018">2018</option>
+																							<option value="2019">2019</option>
+																								<option value="2020">2020</option>
+		</select>
+		<br>
+		<br>
+		<br>
+		<div style="padding-left: 100px;">
+		<button class="text-white" type="submit"><b>GO</b></button>
+	</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+{% endblock %}

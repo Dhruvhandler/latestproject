@@ -1,0 +1,64 @@
+{% extends 'sidebar.html' %}
+{% block content%}
+{% load static %}
+
+<div class="container ps-0 pt-5" >
+ <div class="row p-4 pb-3 " style=" border-radius: 20px; border: 1px solid;box-shadow:7px 7px 9px purple;"  id="grad2" >
+    <div class="col-4 ps-0 pt-0">
+        <img src="{{user.image.url}}" width="250" height="200">
+        <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token%}
+        <h4>Select your Photo</h4>
+        <input type='file' name="image"><br>
+        <centre><button type="submit" class="button btn border border-2 shadow-lg mt-3">Edit</button></centre>
+    </form>
+    </div>
+      <div class="col-8 ps-5 pt-5" >
+         <div class="p-5 ">
+       <centre><h1><a style="color: purple;"><b>PROFILE DETAILS</b></a></h1></centre>
+
+</div>
+</div>
+<div class="row container pt-0">
+<div class="col-md-6 pt-5">
+    <h3><b>Name</b></h3>
+    <br>
+    <h3><b>D.O.B</b></h3>
+    <br>
+    <h3><b>E-mail</b></h3>
+    <br>
+    <h3><b>Phone No.</b></h3>
+    <br>
+</div>
+<div class="col-md-6 pt-5">
+    <h3>{{user.name}}</h3>
+    <br>
+    <h3>{{user.dob}}</h3>
+    <br>
+    <h3>{{user.email}}</h3>
+    <br>
+    <h3>{{user.phone}}</h3>
+    <br>
+</div>
+</div>
+<div style="border: 1px solid; border-color: #ccc"></div>
+<div class="row container pt-5">
+    <div class="col-md-6">
+        <h3><b>Github</b></h3>
+        <br>
+        <h3><b>LinkedIn</b></h3>
+        <br>
+        <h3><b>Facebook</b></h3>
+        <br> 
+    </div>
+    <div class="col-md-6">
+        <h3>{{user.Github}}</h3>
+        <br>
+        <h3>{{user.linkedIn}}</h3>
+        <br>
+        <h3>{{user.Facebook}}</h3>
+        <br> 
+    </div>
+</div>
+</div>
+{% endblock %}

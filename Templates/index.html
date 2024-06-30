@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--  section 1 -->
+
+
+<div data-aos="fade-left" id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img height="1000" src="{% static 'image/index2image.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img height="1000" src="{% static 'image/index1image.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img height="1000" src="{% static 'image/index3image.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+
+<!-- section2 -->
+
+<div class="container pt-5">
+<div class="row">
+	<div class="col-md-5" data-aos="zoom-out-right">
+		 <img style="border: 1px solid; border-radius: 20px" height="100%" width="530" src="{% static 'image/index2secimage.jpg' %}" class="d-block w-100" alt="...">
+	</div>
+	<div class="col-md-7 " data-aos="zoom-out-left" style="border: 1px solid; border-radius: 20px">
+		
+		<h1 class=" text-center pt-5">About The Company</h1>
+
+		<p style="font-size: 18px;" class="p-5">Our Aim is to explore different aspects of A.I in the era of growing modern world.<br><br>
+		A.I is growing rapidly all over the world, with countries realizing its value in form of increased A.I bills passed and job postings in their respective nation.<br> We provide "Graphical Analysis and Prediction" on topic 'A.I bills' across the world to determine development index across different countries, it includes:-<br>
+		1. Cumulative No. of A.I bills passed.<br>
+		2. Share in A.I job postings.<br>
+		3. No. of newly added A.I countries.<br>
+		4. World Development Index([using current LCU parameter]).<br><br>
+		Other features we have with us includes.....<br><br>
+		...Articles(Popular topics and searches across internet)<br>
+		...Live News(Latest news regarding A.I)<br>
+		...F.A.Qs(Most asked by beginners)<br>
+		...Job Boardings(Famous Job Boarders with A.I jobs and posts)<br><br>
+		</p>		
+	</div>
+	</div>	
+	</div>
+
+<!--  -->
+
+<div class="mt-5" style="background: #eee; border-top: 3px solid; border-color: #ccc" >
+
+<div class="container text-center pt-5 " >
+	<h1 style="color:purple;">Featuring Video</h1>
+	<br>
+<p style="color:purple;">Artificial intelligence (AI) refers to computer systems capable of performing tasks that historically required human intelligence, such as recognizing speech, making decisions, and identifying patterns. It’s a fascinating field that combines computer science with large data sets to accomplish tasks and solve problems that are difficult using traditional programming methods</p>
+        <div class="row">
+            {% for i in vi %}
+            {% if forloop.counter <= 1 %}
+            <div class="col-md-12 mt-2 p-4 " data-aos="fade-left" data-aos-duration="3000">
+                <div class="p-5" style="box-shadow:5px 5px 10px purple;border-radius: 50px;">
+                
+
+                   <video src="{{i.video.url}}" controls width="100%"></video>
+                        <br>
+                        <br>
+                        <h3 class="mb-3 fs-5 " style="color:purple; ">{{i.title}}</h3>
+                 </div>
+            </div>
+            {% endif %}
+            {%endfor%}
+        </div>
+    </div>
+
+</p></div></div>
+<!--  section 4 -->
+
+    <div class="row p-3">
+            <div class="col-12" >
+                <h2 class="col-md-12 text-center p-5" style="font-size: 40px; color: purple;">TRENDING ARTICLES</h2>
+            </div>
+        </div>
+                <hr style=" border: 1px solid black;" class="mt-4">
+    <div class="container mb-5">
+        </form>
+        <div class="row mb">
+            {%for i in ar %}
+            {% if forloop.counter <= 3 %}
+            <div class=" col-md-4 mt-5 pe-2">
+                <div class="card shadow-lg h-100 grow" data-aos="flip-right">
+
+                    <img src="{{i.image.url}}" class="card-img-top" alt="..." height="250px">
+                    <div class="card-body">
+                        <h5 style=" font-size: 24px; font-weight: 700;" class="card-title">{{i.title|title}}</h5>
+                            <p>{{i.Description|truncatechars:100}}</p>
+
+                        <a href="{% url 'detailedarticle' id=i.id %}" class="btn text-white" id="grad1">Read more</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {%endfor%}
+        </div>
+    </div>	
+<!--  section 5 -->
+
+<div class="row">
+    <div class="col-12">
+                <h2 class="col-md-12 text-center p-5" style="font-size: 40px; color: purple;">Frequently Asked Question</h2>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+<div class="col-12" style="" >
+    {% for i in fq %}
+   {% if forloop.counter <= 4 %}           
+<details data-aos="fade-up" class="border pt-3 pb-2 ps-4 mt-4   bg-light" style="box-shadow:5px 5px 10px purple;border-radius: 50px;">
+    <summary class="mb-3 fs-5 " style="color:purple; ">{{i.ques}}</summary>
+    <p class="border-top p-4">{{i.ans}}</p>
+    <br>
+    <br>
+</details>
+  {% endif %}      
+{% endfor %}
+</div>
+</div>
+</div>
+
+<!--  section 5 -->
+<div class="container pt-5">
+	<br>
+	<h1 class="text-center" style="color: purple;">Featured A.I Tools</h1>
+	<br>
+<div class="row">
+	<div class="col-2 shadow-lg ps-4" data-aos="flip-right" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="pt-4" width="100%" height="150" src="{% static 'image/youtubetoolimage.jpg' %}">
+			<div class="card-body">
+				<br>
+				<br>
+				<br>
+				<p class="text-center"><b>Youtube Tools</b></p>
+				<div class="ps-5"><a style="background-color: purple;" href="https://tuberanker.com/" class="btn text-white text-center ps-3 eff2">Try Now</a></div>
+				<br>
+				<br>
+			</div>
+	</div>
+	<div class="col-2 shadow-lg" data-aos="flip-right" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="pt-4" width="100%" height="150" src="{% static 'image/writingtoolimage.jpg' %}">
+			<div class="card-body">
+				<br>
+				<br>
+				<br>
+				<p class="text-center"><b>Writing Tools</b></p>
+				<div class="ps-5"><a style="background-color: purple;" href="https://www.grammarly.com/" class="btn text-white text-center ps-3 eff2">Try Now</a></div>
+				<br>
+				<br>
+			</div>
+	</div>
+	<div class="col-2 shadow-lg" data-aos="flip-right" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="pt-4" width="100%" height="150" src="{% static 'image/chatbotimage.jpg' %}">
+			<div class="card-body">
+				<br>
+				<br>
+				<br>
+				<p class="text-center"><b>Chatbots Tools</b></p>
+				<div class="ps-5"><a style="background-color: purple;" href="https://chat.openai.com/" class="btn text-white text-center ps-3 eff2" >Try Now</a></div>
+				<br>
+				<br>
+			</div>
+	</div>
+	<div class="col-2 shadow-lg" data-aos="flip-right" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="pt-4" width="100%" height="150" src="{% static 'image/researchtoolimage.jpg' %}">
+			<div class="card-body">
+				<br>
+				<br>
+				<br>
+				<p class="text-center"><b>Research Tools</b></p>
+				<div class="ps-5"><a style="background-color: purple;" href="https://scite.ai/home" class="btn text-white text-center ps-3 eff2">Try Now</a></div>
+				<br>
+				<br>
+			</div>
+	</div>
+	<div class="col-2 shadow-lg" data-aos="flip-right" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="pt-4" width="100%" height="150" src="{% static 'image/salestoolsimage.jpg' %}">
+			<div class="card-body">
+				<br>
+				<br>
+				<br>
+				<p class="text-center"><b>Sales Tools</b></p>
+				<div class="ps-5"><a style="background-color: purple;" href="https://www.bitrix24.in/" class="btn text-white text-center ps-3 eff2" >Try Now</a></div>
+				<br>
+				<br>
+			</div>
+	</div>
+	<div class="col-2 shadow-lg" data-aos="flip-right" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="pt-4" width="100%" height="150" src="{% static 'image/codingtoolimage.jpg' %}">
+			<div class="card-body">
+				<br>
+				<br>
+				<br>
+				<p class="text-center"><b>Coding Tools</b></p>
+				<div class="ps-5"><a style="background-color: purple;" href="https://codeium.com/" class="btn text-white text-center ps-3 eff2">Try Now</a></div></b>
+				<br>
+				<br>
+			</div>
+	</div>
+		
+</div>
+</div>	
+
+{% endblock %}

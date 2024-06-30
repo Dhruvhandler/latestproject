@@ -1,0 +1,34 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container ps-0 pt-5">
+	<div class="col-12" id="grad2" style="box-shadow:5px 5px 8px purple;">
+                <h2 class="col-md-12 text-center p-5" style="font-size: 40px; color: purple;"><b>Top Job Boarders</b>
+            </div>
+            <br>
+	{% for i in res %}
+ <div class="row ps-0 p-3" data-aos="zoom-in" id="grad2" style="border: 3px solid; border-color: #ccc ;border-radius: 10px; box-shadow:7px 7px 8px purple;">		
+  	<div class="col-md-2 ps-0">
+     
+			<img class="ps-3" width="100%" height="200" src="{{i.logo.url}}">
+			<br>
+	</div>			
+	 <div class="col-md-8" style="border-left: 3px solid; border-color: #202020 ;">	
+			
+				<h3 style="font-size: 26px; color: purple;" class="text-center"><b>{{i.jobboards}}</b></h3>
+				<br>
+				<p style="font-size: 18px;" class="text-center">{{i.description|linebreaks}}</p>
+				<br>
+				
+	</div>
+	<div class="col-md-2 p-4" style="border-left: 3px solid; border-color: #202020 ;">
+		<div class="ps-5 pt-5"><a href="{{i.link}}" target="_blank" class="btn btn-lg text-white text-center ps-3 eff2" style="background: purple;"><b>Explore</b></a></div>
+				<br>
+	</div>
+  </div>
+  <br> 
+  	{% endfor %} 	
+	
+
+{% endblock %}

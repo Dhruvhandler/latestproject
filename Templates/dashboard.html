@@ -1,0 +1,215 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+{% load static %}
+
+    <style>
+   
+       /* chatbot*/
+#chatbot-container {
+            display: none; /* Ensures chatbot starts hidden */
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            width: 400px;
+            height: 400px;
+            background-color: #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            border: 2px solid;   
+        }
+       
+        #chat-container {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #chat-form {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-top: 1px solid #ccc;
+        }
+
+        #user-input {
+            width: 80%;
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+        }
+
+        #chat-form button {
+            width: 15%;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 15px;
+            color: #ffffff;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            align-self: flex-end;
+            background-color: #007bff;
+        }
+
+        .bot-message {
+            align-self: flex-start;
+            background-color: #333333;
+        }
+
+        .user-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.bot-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 3px;
+}
+.effect:hover{
+    color: whitesmoke !important
+}
+
+    </style>
+<!-- Section-1 -->
+<section>
+    <div class="Container pt-5 pb-5">  
+    <center><h1 class="display-4"><b>WELCOME TO ALLABOUTA.I</b></h1></center>
+    <br>
+    <div style="border: 2px solid; border-color: purple;"></div>
+            <h2 class="pt-5"><b>Analysis and Prediction corner</b></h2>
+        <div class="row pt-3">
+            <div class="col-md-6 p-3">
+                <div class="card grow1 pt-5" style="border: 2px solid; border-radius: 20px; box-shadow:6px 6px 9px purple;">
+                        <h4 style="color: purple;" class="text-center"><b>Cumulative no. of bills passed across world</b></h4>
+                    <img class="p-2" src="{% static 'image/graph1.gif' %}" width="100%" height="300">
+                    <br>
+                    <br>
+                    <div class="card-body">
+                        <br>
+                        <p>-->The cumulative number of AI-related bills passed worldwide is a measure of how various countries are adopting legislative measures to address the challenges and opportunities presented by artificial intelligence.<br>-->The AI Index Report 2022 by the Stanford Institute for Human-Centered Artificial Intelligence (HAI) also provides an overview of global AI legislation records in 25 countries. It highlights the trends in AI investment, collaboration, and technical performance.<br>-->According to the data available from Our World in Data, there has been a significant increase in AI-related bills passed into law since 2016.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-3">
+                <div class="card grow1 pt-5" style="border: 2px solid; border-radius: 20px; box-shadow:6px 6px 9px purple;">
+                        <h4 style="color: purple;" class="text-center"><b>Share in A.I job postings across world</b></h4>
+                    <img class="p-3" src="{% static 'image/graph2.gif' %}" width="100%" height="300">
+                    <br>
+                    <br>
+                    <div class="card-body">
+                        <br>
+                        <p>-->Share in AI job postings across the world reflects the increasing demand for AI expertise in various industries across globe.<br>-->OpenAI emphasizes the development of safe and beneficial AI systems and is actively seeking individuals from a wide range of disciplines.<br>-->According to Upwork, AI jobs are among the most in-demand and high-paying careers in 2024. The U.S. Bureau of Labor Statistics predicts a 15% increase in computer and information technology occupations, includes AI jobs, between 2021 and 2031.<br>-->Remote work opportunities in AI are also expanding.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="row pt-2">
+            <div class="col-md-6 p-3" >
+                <div class="card grow1 pt-5" style="border: 2px solid; border-radius: 20px; box-shadow:6px 6px 9px purple;">
+                        <h4 style="color: purple;" class="text-center"><b>No. of newly funded A.I companies across world</b></h4>
+                    <img class="p-2" src="{% static 'image/graph3.gif' %}" width="100%" height="300">
+                    <br>
+                    <br>
+                    <div class="card-body">
+                        <p>-->The number of newly funded AI companies is a key indicator of the health and growth of the AI sector. Analysis based on the latest data given below:<br>-->Trends: After a peak in 2019, there was a slight decline, but the sector remains robust with significant investments.<br>-->Geographical Distribution: The United States and China are leading in terms of the number of AI startups and the average corporate investment, respectively.<br>-->Forbes AI 50 List: The Forbes 2024 AI 50 List highlights the most promising privately-held artificial intelligence companies, reflecting the competit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 p-3">
+               <div class="card grow1 pt-5" style="border: 2px solid; border-radius: 20px; box-shadow:6px 6px 9px purple;">
+                    <h4 style="color: purple;" class="text-center"><b>World Development Index</b></h4>
+                    <img class="p-2" src="{% static 'image/graph4.gif' %}" width="100%" height="300">
+                    <br>
+                    <br>
+                    <div class="card-body">
+                        <p>-->The World Development Index of AI is a comprehensive metric that evaluates the progress and impact of A.I across different countries.<br>--> It takes into account various factors such as investment in AI, innovation, and implementation to provide a holistic view of how AI is developing globally.<br>-->According to the AI Index Report 2024, the index measures trends in AI, including technical advancements, public perceptions, and geopolitical dynamics surrounding its development.<br>-->The Global AI Index by Tortoise Media is another resource that scores nations based on three pillars: Investment, Innovation, and Implementation. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+<!-- Chatbot toggle button -->
+<button id="chatbot-toggle-button" style="position: fixed; bottom: 10px; right: 20px; background-color: purple;" class="btn btn-lg rounded-pill effect text-white"><b>Ask Me</b></button>
+
+<div id="chatbot-container" class="shadow-lg" style="display: none;">
+    <div id="chat-container">
+        <!-- Chat messages will be added here -->
+    </div>
+    <form id="chat-form" style="background-color: purple; position: fixed; bottom: 20px; right: 20px;width:400px;border-radius:0 0 0 10px">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button type="submit btn-info">Send</button>
+    </form>
+</div>
+
+
+<script>
+    // Function to toggle visibility of chatbot container
+    function toggleChatbot() {
+        var chatbotContainer = document.getElementById('chatbot-container');
+        chatbotContainer.style.display = (chatbotContainer.style.display === 'none') ? 'block' : 'none';
+    }
+
+    // Event listener for chatbot toggle button
+    document.getElementById('chatbot-toggle-button').addEventListener('click', toggleChatbot);
+
+    // Function to send user message and display bot response
+    function sendMessage(event) {
+        event.preventDefault();
+
+        var userInput = document.getElementById('user-input').value;
+        var chatContainer = document.getElementById('chat-container');
+        var messageElement = document.createElement('p');
+        messageElement.textContent = 'You: ' + userInput;
+        chatContainer.appendChild(messageElement);
+
+        // Call your backend API to get bot response and append it to chat container
+        fetch('/chat/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify({ 'message': userInput })
+        })
+        .then(response => response.json())
+        .then(data => {
+            var botResponseElement = document.createElement('p');
+            botResponseElement.textContent = 'Bot: ' + data.response;
+            chatContainer.appendChild(botResponseElement);
+        });
+
+        // Clear input field
+        document.getElementById('user-input').value = '';
+    }
+
+    // Attach sendMessage() function to form submission event
+    document.getElementById('chat-form').addEventListener('submit', sendMessage);
+</script>
+
+{% endblock %}

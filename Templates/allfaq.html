@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="row" style="background-image: linear-gradient(to top,purple,darkblue);">
+    <div class="col-12" id="grad1" style="box-shadow:3px 3px 4px purple;border-radius: 50px;">
+                <h2 class="col-md-12 text-center text-light p-5" style="font-size: 40px">Frequently Asked Question</h2>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+
+<div class="col-12" style="" >
+    {% for i in data %}
+   
+           
+<details data-aos="fade-up"
+     data-aos-duration="3000" class="border pt-3 pb-2 ps-4 mt-4   bg-light" style="box-shadow:5px 5px 10px purple;border-radius: 50px;">
+    <summary class="mb-3 fs-5 " style="color:purple; ">{{i.ques}}</summary>
+    <p class="border-top p-4">{{i.ans}}</p>
+    <br>
+    <br>
+</details>
+        
+{% endfor %}
+</div>
+{% endblock %}
+
+

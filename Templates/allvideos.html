@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="row" style="background-image: linear-gradient(to top,purple,darkblue);">
+    <div class="col-12" id="grad1" style="box-shadow:3px 3px 4px purple;border-radius: 50px;">
+                <h2 class="text-center text-light p-5" style="font-size: 40px">Featured Videos</h2>
+            </div>
+</div>
+
+
+<div class="container">
+    <form method="POST" action="">
+            {% csrf_token %}
+        <div class="row pt-3">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-1 ps-3">
+                <img src="{% static 'image/magnify.jpg' %}" height='45' width="100%">
+            </div>
+            <div class="col-md-3">
+            <input style="border-color: #000;" class="form-control" name="se">
+        </div>
+        <div class="col-md-2">
+            <button style="background-color: purple;" class="btn text-white">Search</button>
+         </div>   
+        </div>
+    </form>
+        <div class="row ">
+            {%for i in data %}
+            <div class="col-md-6 mt-5 p-4 " >
+                <div class="p-5" style="box-shadow:5px 5px 10px purple;border-radius: 50px;" data-aos="zoom-in-down">
+                
+
+                   <video src="{{i.video.url}}" controls width="100%"></video>
+                        <br>
+                        <br>
+                        <h5 class="mb-3 fs-5 " style="color:purple; ">{{i.title}}</h5>
+                 </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+{% endblock %}

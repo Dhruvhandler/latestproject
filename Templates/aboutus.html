@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="col-12" id="grad1" style="box-shadow:3px 3px 4px purple;">
+                <h2 class="col-md-12 text-center text-light p-5" style="font-size: 40px">About Us</h2>
+            </div>
+<div class="row p-5">
+	<div class="col-md-5">
+		 <img style="border: 1px solid; border-radius: 20px;" height="100%" width="750" src="{% static 'image/index2secimage.jpg' %}" class="d-block " alt="...">
+	</div>
+	<div class="col-md-7" style="border: 1px solid; border-radius: 20px;">
+		
+		<h1 class=" text-center pt-5">About The Company</h1>
+
+		<p style="font-size: 18px;" class="p-5">Our Aim is to explore different aspects of A.I in the era of growing modern world.<br><br>
+		A.I is growing rapidly all over the world, with countries realizing its value in form of increased A.I bills passed and job postings in their respective nation.<br> We provide "Graphical Analysis and Prediction" on topic 'A.I bills' across the world to determine development index across different countries, it includes:-<br>
+		1. Cumulative No. of A.I bills passed.<br>
+		2. Share in A.I job postings.<br>
+		3. No. of newly added A.I countries.<br>
+		4. World Development Index([using current LCU parameter]).<br><br>
+		Other features we have with us includes.....<br><br>
+		...Articles(Popular topics and searches across internet)<br>
+		...Live News(Latest news regarding A.I)<br>
+		...F.A.Qs(Most asked by beginners)<br>
+		...Job Boardings(Famous Job Boarders with A.I jobs and posts)<br><br>
+		</p>	
+	</div>
+	</div>	 
+
+
+{% endblock %}

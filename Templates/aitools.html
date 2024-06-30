@@ -1,0 +1,34 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block content %}
+<head>
+<style>
+	.effect:hover{
+		color: #ccc !important;
+	}
+</style>
+</head>
+
+<div class="container ps-0 pt-5">
+	<div class="col-12" id="grad2" style="box-shadow:5px 5px 8px purple;">
+                <h2 class="col-md-12 text-center p-5" style="font-size: 40px; color: purple;"><b>Most Popular A.I Tools</b></h2>
+            </div>
+ <div class="row ps-0 pt-5">
+ 	{% for i in obj %}	
+  <div class="col-md-3 p-3">
+      <div class="card shadow-lg" data-aos="zoom-in" style="border: 3px solid; border-radius: 10px; border-color: #ccc;  ">
+			<img class="p-2" width="100%" height="200" src="{{i.image.url}}" style="border: 3px solid; border-radius: 10px; border-color: #ccc;">
+			<br>
+			<div class="card-body">
+				<p style="font-size: 22px;" class="text-center"><b>{{i.category_name}}</b></p>
+				<br>
+				<div style="padding-left: 70px ;"><centre><a href="{% url 'detailedaitools' name=i.category_name %}" class="btn text-white text-center ps-3 btn-lg eff2" style="background: purple;"><b>Try Now</b></a></centre></div>
+				<br>
+			</div>
+	</div>    
+  </div>
+  	{% endfor %}
+</div>
+</div>
+
+{% endblock %}
